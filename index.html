@@ -10,8 +10,91 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Favicon created from the same SVG design -->
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect fill='%232563eb' width='40' height='40' rx='8'/><path fill='white' d='M10 10H30V16L16 30H30V34H10V28L24 14H10V10Z'/><path fill='%2310b981' d='M24 26C24 23.79 25.79 22 28 22C30.21 22 32 23.79 32 26C32 28.21 28 32 28 32C28 32 24 28.21 24 26Z'/></svg>">
+
+    <!-- Custom Alignment Fixes & UI Touches -->
+    <style>
+        /* General Layout Fixes */
+        .services-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .service-card {
+            flex: 1;
+            max-width: 450px;
+            min-width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .features-content {
+            display: block;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .features-text {
+            width: 100%;
+        }
+
+        .features-list {
+            display: inline-block;
+            text-align: left;
+            margin-top: 2rem;
+        }
+
+        .features-list li {
+            margin-bottom: 1.5rem;
+        }
+
+        .stats-section {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            min-width: 200px;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        /* Logo Alignment Styles */
+        .logo, .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+        
+        /* Footer specific styling for the NDIS logo replacement */
+        .footer-ndis-logo {
+            height: 50px; 
+            width: auto;
+            margin-top: 1rem;
+        }
+
+        .footer-logo-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -19,7 +102,7 @@
         <div class="container">
             <nav class="navbar">
                 <a href="#home" class="logo">
-                    <!-- NEW SVG LOGO START -->
+                    <!-- ORIGINAL ZAYHAM CARE LOGO RESTORED HERE -->
                     <svg class="logo-img" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                         <!-- Background Shield/Shape -->
                         <path d="M4 8C4 5.79 5.79 4 8 4H32C34.21 4 36 5.79 36 8V24C36 32 20 38 20 38C20 38 4 32 4 24V8Z" fill="#2563eb"/>
@@ -30,7 +113,7 @@
                         <!-- Green Care Heart Accent -->
                         <path d="M24 24C24 21.79 25.79 20 28 20C30.21 20 32 21.79 32 24C32 26.21 28 30 28 30C28 30 24 26.21 24 24Z" fill="#10b981"/>
                     </svg>
-                    <!-- NEW SVG LOGO END -->
+                    <!-- END ORIGINAL LOGO -->
                     <span class="logo-text">ZAYHAM CARE</span>
                 </a>
                 
@@ -129,19 +212,6 @@
                     <h3 class="service-title">Budget Tracking</h3>
                     <p class="service-desc">Real-time monitoring of your NDIS budget with detailed reports and insights to help you make informed decisions about your funding.</p>
                 </div>
-
-                <div class="service-card">
-                    <div class="service-icon service-icon-orange">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Provider Coordination</h3>
-                    <p class="service-desc">We liaise with your service providers on your behalf, managing bookings, scheduling, and ensuring seamless service delivery.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -149,40 +219,6 @@
     <!-- Features Section -->
     <section class="features" id="about">
         <div class="container">
-            <div class="features-top">
-                <div class="feature-cards">
-                    <div class="feature-card feature-card-blue">
-                        <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
-                        </div>
-                        <h4>24/7 Access</h4>
-                        <p>Access your portal anytime, anywhere</p>
-                    </div>
-                    <div class="feature-card feature-card-green">
-                        <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                            </svg>
-                        </div>
-                        <h4>Compliance Support</h4>
-                        <p>Full NDIS compliance guaranteed</p>
-                    </div>
-                    <div class="feature-card feature-card-orange">
-                        <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="12" cy="7" r="4"></circle>
-                            </svg>
-                        </div>
-                        <h4>Personalised Support</h4>
-                        <p>Dedicated support coordinator</p>
-                    </div>
-                </div>
-            </div>
-
             <div class="features-content">
                 <div class="features-text">
                     <span class="section-tag">Why Choose Us</span>
@@ -234,19 +270,12 @@
                         </li>
                     </ul>
                 </div>
-                <div class="features-image">
-                    <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&h=500&fit=crop" alt="Caregiver helping client" class="rounded-image">
-                </div>
             </div>
 
             <div class="stats-section">
                 <div class="stat-card">
                     <span class="stat-number">98%</span>
                     <span class="stat-label">Client Satisfaction</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label">Participants Supported</span>
                 </div>
                 <div class="stat-card">
                     <span class="stat-number">24hr</span>
@@ -396,22 +425,15 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
+                    <!-- Footer Logo Text Only -->
                     <a href="#home" class="footer-logo">
-                        <!-- NEW SVG LOGO START -->
-                        <svg class="footer-logo-img" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 8C4 5.79 5.79 4 8 4H32C34.21 4 36 5.79 36 8V24C36 32 20 38 20 38C20 38 4 32 4 24V8Z" fill="#2563eb"/>
-                            <path d="M12 12H28V16L18 28H28V32H12V28L22 16H12V12Z" fill="white"/>
-                            <path d="M24 24C24 21.79 25.79 20 28 20C30.21 20 32 21.79 32 24C32 26.21 28 30 28 30C28 30 24 26.21 24 24Z" fill="#10b981"/>
-                        </svg>
-                        <!-- NEW SVG LOGO END -->
-                        <span>ZAYHAM CARE</span>
+                        <span class="footer-logo-text">ZAYHAM CARE</span>
                     </a>
                     <p class="footer-tagline">Your trusted partner in NDIS plan management. Making your NDIS journey simpler and stress-free.</p>
+                    
+                    <!-- Replaced "We heart NDIS" text with the I Love NDIS logo -->
                     <div class="footer-ndis">
-                        <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                        </svg>
-                        <span>We <span class="heart-red">❤</span> NDIS</span>
+                        <img src="https://z-cdn-media.chatglm.cn/files/1e2e7d5e-3c7c-4237-8e13-f7629603befb.png?auth_key=1872976166-c6beb03d4ed842378c4e578190423503-0-5c584c31e7f033b36eb37d47a5768a20" alt="I love NDIS" class="footer-ndis-logo">
                     </div>
                 </div>
 
@@ -420,7 +442,6 @@
                     <ul>
                         <li><a href="#services">Invoice Processing</a></li>
                         <li><a href="#services">Budget Tracking</a></li>
-                        <li><a href="#services">Provider Coordination</a></li>
                         <li><a href="#services">Plan Management</a></li>
                     </ul>
                 </div>
